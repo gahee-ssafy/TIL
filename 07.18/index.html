@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="no-referrer-when-downgrade" />
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- fontawesome key -->
+  <script defer src="./app.js"></script>
+  <title>Chat</title>
+</head>
+
+<body>
+  <button id="theme-toggle" style="position:absolute;top:10px;right:10px;z-index:10;">🌙/☀️</button>
+  <!-- 채팅창 화면 -->
+  <section class="container">
+    <!-- 프로필 영역 -->
+    <div class="top-area">
+      <div class="profile-area" style="display:flex;align-items:center;gap:8px;">
+        <span style="font-size:2rem;">🐶</span>
+        <span style="font-size:1.1rem;font-weight:bold;">시츄 챗봇</span>
+      </div>
+    </div>
+    <!-- 채팅 영역 -->
+    <div class="chat-area"></div>
+
+    <!-- 채팅창 하단 영역 -->
+    <div class="bottom-area">
+      <input class="chat-input" type="text" placeholder="type a message..." />
+    </div>
+  </section>
+  <style>
+    @import url(./style.css);
+  </style>
+</body>
+
+</html>
