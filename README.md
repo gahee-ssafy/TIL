@@ -1,13 +1,10 @@
 # 강의요약
 ### 7.16.(1차)
 GUI : 그래픽 유저 인터페이스
-TUI : 텍스트 (이말은 잘 안씁니다.)
-
+TUI : 텍스트 (이말은 잘 안씁니다.) = CLI
 CLI : Command Line Interface
 
 interface : 대상을 제어하는 수단 ( ex) 리모컨) )
-
----
 
 Window OS의 Interface
 GUI : Windows Shell
@@ -31,7 +28,8 @@ CLI의 장점 : 빠르다(Commit 명령어 3~4초면 끝)
 
 ---
 
-리눅스는 항상 HOME 디렉토리에서 시작 : ~
+# 배쉬사용 
+항상 HOME 디렉토리에서 시작 : ~
 . : 현재 디렉토리
 cd ~ : 홈 디렉토리
 cd .. : 상위 디렉토리
@@ -198,30 +196,27 @@ git restore --staged 파일명
 
 ## 07.21.(월)
 ### 강의노트
-# ctrl 누른 상태에서 마우스 좌클릭
-# print 내장 함수의 end옵션 default는 줄바꿈
-# print 내장 함수의 sep옵션 default는 공백
+ctrl 누른 상태에서 마우스 좌클릭
+print줄바꿈 내장 함수의 end옵션 default는 줄바꿈
+print공백 내장 함수의 sep옵션 default는 공백
 print('hello', end = ' ')
 print('world')
 
-# 변수에 값이 저장된다는 개념이 아니다.
-# 변수에 값이 할당된다. 값은 메모리 주소를 가르키고, 메모리를 참조한다.
+<!-- # 변수에 값이 저장된다는 개념이 아니다.
+# 변수에 값이 할당된다. 값은 메모리 주소를 가르키고, 메모리를 참조한다. -->
+
 degree = 36.5
 print(id(degree))
-
 # 재할당하면 메모리 주소가 바뀐다. 
 degree = 36.6
 print(id(degree))
 
-
-
-
-
+<!-- 
 # 변수명 규칙 : 숫자로 시작할 수 없다.
 # 언더스코어 가능 _
 # 키워드 사용 불가능 (if, for)
 # 내장함수나 메서드 가급적 사용 하지 않는다
-# 대소문자는 서로 다른 유니코드값을 가지고 있다.
+# 대소문자는 서로 다른 유니코드값을 가지고 있다. -->
 
 lst = [1, 2, 3]
 sum = 7 # 에러는 나지 않지만 가급적 사용하지 않는다
@@ -251,12 +246,21 @@ print(num)
 space = ' '
 print(ord(space))
 
-
+# f-string
 name = '장상호'
 age = 20
 height = 185.76
 
 print(f'이름은 {name}이고, 나이는 {age}살, 키는 {height:.1f}')
+* :.1f /소수점 하나만 보임.
+
+# f-string(2)
+예시, 전 가희
+name = '가희'
+print(f'{전 }{name}')
+- f스트링을 쓰면, 공백이나 띄움이 자유로움.
+- 프린트만 쓰면 공백이나 띄움이 제한적임. 
+  > 콤마는 모두 공백.
 
 
 # 시퀀스타입
@@ -265,6 +269,7 @@ arr = [1, 2, 3, 4]
 arr[0] = 10
 print(arr)
 # 문자열 : 불변시퀀스
+- 하나를 선택해 바꿀 수 없단 말임. 
 char = "hello"
 char[0] = 'y'
 print(char)
@@ -277,6 +282,12 @@ print(length)
 print(char[0], char[-1])
 print(char[::2])
 print(char[::-1])
+char[start:stop:step]
+- 시작, 멈춤, 걸음폭
+- step이 -1이면 역순으로 생성함. -1부터 시작.
+- start는 0으로 시작. 
+- stop은 그 전까지 생성함. 예를들어 char = 12345, char[0:3:]라면 123임. 
+
 
 
 ### vscode 단축키 
