@@ -136,3 +136,36 @@ for i in my_dict: # key를 기준으로 순회
 
 for i in my_set: # hash값이 작은 순서대로 순회
     print(i, end = ' ')
+
+# 0723 복습
+(자주틀리는 부분만 적음)
+
+===
+# 함수를 수정하고 호출 결과를 result_1 변수에 할당하여 출력하시오.
+def is_negative(a):
+    if a <= 0:
+        return  True # (오답)return = True
+    else:
+        return False # (오답)return = False
+print( is_negative(3) ) 
+
+# is_negative(3) 결과 : False
+# 함수를 수정하고 호출 결과를 result_2 변수에 할당하여 출력하시오.
+def default_arg_func(default='기본 값'):
+    return default
+
+result_3 = default_arg_func()
+result_4 = default_arg_func('다른 값')
+print(result_3)
+print(result_4)
+
+
+number_of_people = 0
+
+def increase_user(): #짜장
+    global number_of_people # 0 (오답)globals.number_of_people
+    number_of_people += 1 #1
+
+increase_user() # 호출, (오답)increase_user(0) #이건 왜 있는 걸까? 
+print(f'현재 가입 된 유저 수 : {number_of_people}')
+===
