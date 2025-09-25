@@ -1,0 +1,29 @@
+{% extends "base.html" %} 
+
+
+{% comment %} 상속(맨위 주석은 오류), 구멍뚫기 {% endcomment %} 
+{% block content %}
+
+{% comment %} 1. for문 닫기 주의 endfor-endblock 맨아래 {% endcomment %} 
+{% comment %} 2. base.html 최상위 폴더 templates 안에 {% endcomment %} 
+{% comment %} articles는 context의 key 값 {% endcomment %}
+
+  <h1>홈페이지</h1>
+  <hr>
+
+  {% for article in articles %}
+  <p>글 id: {{article.pk}}</p>
+    <a href=" {% url "articles:detail" article.pk %}">
+      <p>글 제목: {{article.title}}</p>
+    </a>
+
+  <p>글 내용: {{article.content}}</p>
+  <p>생성시간: {{article.created_at}}</p>
+  <p>수정시간: {{article.updated_at}}</p>
+  <hr />
+  {% endfor %} 
+
+
+
+
+{% endblock content%}

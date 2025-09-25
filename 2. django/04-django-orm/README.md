@@ -57,12 +57,16 @@
           content가 'django!' 출력
           Article.objects.filter(content = 'django!')
 
+# get을 많이 쓴다. filter는 잘 안쓴다.
+
         나. get ; 단일데이터 출력
           pk와 같이 고유성 보장된 조회에서 사용
           Article.objects.get(pk=1)
           <Article: Article object (1)>
     3. Update:
-        가. 선 조회-후 갱신
+
+# 선 조회(get-pk)-후 갱신, 1번 1건
+
           article = Article.objects.get(pk=1)
           article.title = 'byebye'
           article.save()
