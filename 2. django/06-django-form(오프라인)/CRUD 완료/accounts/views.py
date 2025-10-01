@@ -7,3 +7,4 @@ from django.contrib.auth import login as auth_login
 
 def login(request):
     pass
+  
